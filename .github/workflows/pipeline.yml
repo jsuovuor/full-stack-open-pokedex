@@ -47,6 +47,7 @@ jobs:
 
   tag_release:
     if: ${{ github.event_name == 'push' }}
+    permissions: write-all
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-latest
     steps:
