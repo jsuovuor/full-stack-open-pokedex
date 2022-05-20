@@ -32,7 +32,7 @@ jobs:
           wait-on: http://localhost:5000
 
   Deploy:
-    if: ${{ github.event_name == 'push' || !contains(toJson(github.event.commits.*.message), '#skip')}}
+    if: ${{ github.event_name == 'push' && !contains(toJson(github.event.commits.*.message), '#skip')}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -46,7 +46,7 @@ jobs:
           rollbackonhealthcheckfailed: true
 
   tag_release:
-    if: ${{ github.event_name == 'push' || !contains(toJson(github.event.commits.*.message), '#skip')}}
+    if: ${{ github.event_name == 'push' && !contains(toJson(github.event.commits.*.message), '#skip')}}
     permissions: write-all
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-latest
