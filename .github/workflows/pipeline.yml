@@ -1,3 +1,5 @@
+#Discord webhook notifications disabled in simple_deployment_pipeline and Deploy. Uncomment to enable them.
+
 name: Deployment pipeline
 
 on:

@@ -1,0 +1,14 @@
+name: Periodic healthcheck
+
+on:
+  schedule:
+    - cron: '1 * * * *'
+
+jobs:
+  health_check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: healthcheck
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://fso-part11.herokuapp.com/health
