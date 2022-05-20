@@ -12,7 +12,7 @@ describe('<App />', () => {
     axiosMock.get.mockResolvedValueOnce(
       {
         data: {
-          results: [{ url: 'https://pokeapi.co/api/v2/pokemon/1/', name: 'bulbasaurr', id: 1 }]
+          results: [{ url: 'https://pokeapi.co/api/v2/pokemon/1/', name: 'bulbasaur', id: 1 }]
         }
       }
     )
@@ -27,7 +27,7 @@ describe('<App />', () => {
     axiosMock.get.mockResolvedValueOnce({})
     await act(async () => {
       const { getByAltText } = render(<App />)
-      expect(getByAltText('Loading...')).toBeVisible()
+      expect(getByAltText('tedhdthdgf')).toBeVisible()
     })
   })
 
