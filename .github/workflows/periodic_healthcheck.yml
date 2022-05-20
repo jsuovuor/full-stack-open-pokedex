@@ -11,4 +11,4 @@ jobs:
       - name: healthcheck
         uses: jtalk/url-health-check-action@v2
         with:
-          url: https://fso-part11.herokuapp.com/health
+          url: https://pokedex-fullstack2022.herokuapp.com/health
