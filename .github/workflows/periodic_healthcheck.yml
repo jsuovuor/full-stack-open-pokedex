@@ -1,17 +1,18 @@
-#Runs health check everyday at 00:00
-#Uncomment to enable
+#Runs health check
+#Currently scheduled to run once every year (1st of Jan) '0 0 1 1 *' 
+#Change to e.g. '0 0 * * *' to be run every day at 00:00
 
-#name: Periodic healthcheck
+name: Periodic healthcheck
 
-#on:
-#  schedule:
-#    - cron: '0 0 * * *'
+on:
+  schedule:
+    - cron: '0 0 1 1 *'
 
-#jobs:
-#  health_check:
-#    runs-on: ubuntu-20.04
-#    steps:
-#      - name: healthcheck
-#        uses: jtalk/url-health-check-action@v2
-#        with:
-#          url: https://pokedex-fullstack2022.herokuapp.com/health
+jobs:
+  health_check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: healthcheck
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://pokedex-fullstack2022.herokuapp.com/health
