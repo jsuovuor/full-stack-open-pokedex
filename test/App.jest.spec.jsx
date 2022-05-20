@@ -27,7 +27,7 @@ describe('<App />', () => {
     axiosMock.get.mockResolvedValueOnce({})
     await act(async () => {
       const { getByAltText } = render(<App />)
-      expect(getByAltText('tedhdthdgf')).toBeVisible()
+      expect(getByAltText('Loading...')).toBeVisible()
     })
   })
 
