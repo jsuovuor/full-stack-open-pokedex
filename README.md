@@ -1,3 +1,6 @@
+#Exercise 11.20 and 11.21 repository URL:
+https://github.com/jsuovuor/anekdootit-fullstack2022/
+
 # Full Stack open CI/CD
 
 This repository is used for the CI/CD module of the Full stack open course
