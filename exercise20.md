@@ -1,0 +1,1 @@
+https://github.com/jsuovuor/anekdootit-fullstack2022
